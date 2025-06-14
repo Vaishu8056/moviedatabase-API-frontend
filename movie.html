@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="icon"href="panda.png">
+    <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+   <div class="topnav">
+ 
+
+    <a class="active" href="#">Movie Site</a>
+    <div class="search-container">
+        <form role="search" id="form">
+            <input type="search" id="query" name="q" placeholder="Search...">
+         
+
+        </form>
+    </div>
+    
+
+   </div> 
+   
+   <div style="padding-left:16px">
+    <section id="section">
+      <div class="movie-scroll-container" id="movieCardContainer">
+        <!-- JS will dynamically insert movie cards here -->
+      </div>
+  <!--- <div class="row">
+    <div class="column">
+        <div class="card">
+          <center> <img src="wakanda image.jpg" class="thumbnail"> </center>
+          <h3>Movie Title</h3> 
+        </div>
+    </div>
+   </div>-->
+   
+
+    </section>
+      <!-- 🎬 Movie Detail Modal -->
+      <div id="movieModal" style="display:none; position:fixed; top:10%; left:10%; width:80%; background-color:#151f30; color:white; padding:20px; border-radius:10px; z-index:999;">
+        <span onclick="closeModal()" style="cursor:pointer; float:right; font-size: 20px;">❌</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" style="width:200px; border-radius:12px;" />
+        <iframe id="modalTrailer" style="width:100%; height:400px; margin-top:20px; display:none; border-radius:12px;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <p id="modalOverview"></p>
+        <div id="reviewSection" style="margin-top:20px;">
+          <h3>Submit Your Review:</h3>
+          <label style="color:white;">Rating (out of 10):</label><br>
+          <input type="number" id="userRating" min="1" max="10" style="width:50px; padding:5px; border-radius:5px;background-color: white; color: black;"><br><br>
+  
+          <label style="color:white;">Your Review:</label><br>
+          <textarea id="userReview" rows="4" cols="50" placeholder="Write your review..." style="padding:10px; border-radius:8px;"></textarea><br><br>
+  
+          <button onclick="submitReview()" style="background:#28a745; color:white; padding:10px 20px; border:none; border-radius:8px; cursor:pointer;">Submit Review</button>
+          <div id="reviewList" style="margin-top:20px;"></div>
+
+        </div>
+        <a id="modalDownload" href="#" download style="color:white; background:#007bff; padding:10px 15px; border-radius:6px; text-decoration:none; display:inline-block; margin-top:10px;">⬇ Download</a>
+        <button id="watchlistButton">Add to Watchlist</button>
+<button id="favoriteButton">Add to Favorites</button>
+      </div>
+</div> 
+<button id="darkModeToggle">Toggle Dark Mode</button>
+</body>
+<script src="movie.js"></script>
+</html>   

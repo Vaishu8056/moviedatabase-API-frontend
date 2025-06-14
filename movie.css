@@ -1,0 +1,132 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color: #131720;
+    font-family: sans-serif;
+    color: white; 
+}
+body.dark-mode {
+    background-color: #ffff; /* Dark background color */
+    color: white; /* Text color for dark mode */
+}
+h3{
+    color:white;
+}
+.topnav{
+    overflow: hidden;
+    background-color:#131720;
+    padding:10px;
+}
+.topnav a{
+    float:left;
+    display:block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.topnav .search-container{
+    float:right;
+}
+form{
+    background-color: #151f30;
+    width: 300px;
+    height: 43px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+}
+input{
+    all:unset;
+    font:15px system-ui;
+    color:#fff;
+    height:100%;
+    width:100%;
+    padding:6px 9px;
+    
+}
+.thumbnail{
+    height: 350px;
+    width:300px;
+    border-radius: 19px;
+}
+.column{
+    float:left;
+    width: 25%;
+    padding:10px 10px;
+}
+.card{
+    border-radius: 19px;
+    padding:15px;
+    text-align: center;
+    background-color: #151f30;
+    
+}
+#darkModeToggle {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+
+
+body.dark-mode .column
+ {
+    background-color: white;
+    color: white;
+}
+body.dark-mode .topnav{
+    background-color: rgb(240, 171, 87);
+}
+body.dark-mode .card{
+background-color: rgb(240, 171, 87);
+}
+body.dark-mode #query{
+    background-color: rgb(235, 200, 157);  
+}
+
+
+.movie-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px;
+    padding: 10px;
+  }
+
+  .movie-scroll-container::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .movie-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  #movieModal {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    max-height: 90vh; /* ✅ allows scrolling */
+    overflow-y: auto;  /* ✅ enables vertical scroll */
+    background-color: #151f30;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 999;
+  }
+
+
+
